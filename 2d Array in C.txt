@@ -1,0 +1,515 @@
+/******************************************************************************
+ Q1 . Write a C program to printf 2d array
+OWNER: AKSHAY GANGARAM KADAM
+BATCH: PPA9
+*******************************************************************************/
+
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int a[10][10],i,j,row,col;
+
+	printf("ENTER YOUR ROW VALUE");
+	scanf("%d",&row);
+
+	printf("ENTER YOUR COL VALUE");
+	scanf("%d",&col);
+
+	printf("enter your array element");
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+
+
+	getch();
+
+}
+
+
+
+
+
+
+
+/******************************************************************************
+ Q 2. Write a C program to accpet 2d array find given number in that matrix
+OWNER: AKSHAY GANGARAM KADAM
+BATCH: PPA9
+*******************************************************************************/
+
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int a[10][10],i,j,row,col,number=0,flag=0;
+
+	printf("ENTER YOUR ROW VALUE");
+	scanf("%d",&row);
+
+	printf("ENTER YOUR COL VALUE");
+	scanf("%d",&col);
+	printf("enter your serch element");
+	scanf("%d",&number);
+
+
+	printf("enter your array element");
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			if(a[i][j]==number)
+			{
+				flag=1;
+			}
+
+		}
+		
+	}
+
+	if(flag==1)
+	{
+		printf("number is found");
+	}
+	else
+		printf("number is not found");
+
+	getch();
+
+}
+
+
+
+
+/******************************************************************************
+ Q 3. Write a C program to accpet 2d array and print its transpose matrix
+
+OWNER: AKSHAY GANGARAM KADAM
+BATCH: PPA9
+*******************************************************************************/
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int a[10][10],i,j,row,col;
+
+	printf("ENTER YOUR ROW VALUE");
+	scanf("%d",&row);
+
+	printf("ENTER YOUR COL VALUE");
+	scanf("%d",&col);
+	
+
+
+	printf("enter your array element");
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("your enter matrix \n");
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+
+	printf("your transpose matrix \n");
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			printf("%d\t",a[j][i]);
+		}
+		printf("\n");
+	}
+
+
+
+	getch();
+
+}
+
+/******************************************************************************
+ Q 4. Write a C program to accpet 2d array and print its addition
+
+OWNER: AKSHAY GANGARAM KADAM
+BATCH: PPA9
+*******************************************************************************/
+
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int a[10][10],c[10][10],b[10][10],i,j,row,col;
+
+	printf("ENTER YOUR ROW VALUE");
+	scanf("%d",&row);
+
+	printf("ENTER YOUR COL VALUE");
+	scanf("%d",&col);
+	
+
+
+	printf("enter your  1st array element\n");
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	
+
+	printf("enter your 2nd array element\n");
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			scanf("%d",&b[i][j]);
+		}
+	}
+
+
+	printf("addition of matrix is\n");
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+
+			c[i][j]=a[i][j]+b[i][j];
+
+			printf("%d\t",c[i][j]);
+		}
+		printf("\n");
+	}
+
+	
+
+
+
+	getch();
+
+}
+
+
+
+/******************************************************************************
+ Q 5. Write a C program to accpet 2d array and print its substraction
+
+OWNER: AKSHAY GANGARAM KADAM
+BATCH: PPA9
+*******************************************************************************/
+
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int a[10][10],c[10][10],b[10][10],i,j,row,col;
+
+	printf("ENTER YOUR ROW VALUE");
+	scanf("%d",&row);
+
+	printf("ENTER YOUR COL VALUE");
+	scanf("%d",&col);
+	
+
+
+	printf("enter your  1st array element\n");
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	
+
+	printf("enter your 2nd array element\n");
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			scanf("%d",&b[i][j]);
+		}
+	}
+
+
+	printf("subtraction of matrix is\n");
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+
+			c[i][j]=a[i][j]-b[i][j];
+
+			printf("%d\t",c[i][j]);
+		}
+		printf("\n");
+	}
+
+	
+
+
+
+	getch();
+
+}
+
+/******************************************************************************
+ Q 6. Write a C program to accpet 2d array and print its upper trangular
+
+OWNER: AKSHAY GANGARAM KADAM
+BATCH: PPA9
+*******************************************************************************/
+
+
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int a[10][10],i,j,row,col,flag=0;
+
+	printf("ENTER YOUR ROW VALUE");
+	scanf("%d",&row);
+
+	printf("ENTER YOUR COL VALUE");
+	scanf("%d",&col);
+	
+
+
+	printf("enter your array element\n");
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	
+
+
+
+	for(i=0;i<row;i++)
+	{ 
+		 printf("\n");
+		for(j=0;j<col;j++)
+		{
+
+		if ((i >j)&& (a[i][j]!=0))
+				{
+                flag=1;
+                
+                break;
+                }
+	
+		}
+		printf("\n");
+	}
+
+	
+if(flag==0)
+{
+    printf("given matrix is upper trangular");
+}
+else
+ printf("given matrix is not upper trangular");
+
+
+	getch();
+
+}
+
+/******************************************************************************
+ Q 7. Write a C program to accpet 2d array and print its lower trangular matrix
+
+OWNER: AKSHAY GANGARAM KADAM
+BATCH: PPA9
+*******************************************************************************/
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int a[10][10],i,j,row,col;
+
+	printf("ENTER YOUR ROW VALUE");
+	scanf("%d",&row);
+
+	printf("ENTER YOUR COL VALUE");
+	scanf("%d",&col);
+	
+
+
+	printf("enter your array element\n");
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	
+
+
+
+	for(i=0;i<row;i++)
+	{ 
+		 printf("\n");
+		for(j=0;j<col;j++)
+		{
+
+		if (i >=j)
+				{
+                	printf("%d\t", a[i][j]);
+                }
+	
+            	 
+	            
+           
+ 
+		}
+		printf("\n");
+	}
+
+	
+
+
+
+	getch();
+
+}
+
+/******************************************************************************
+ Q 8. Write a C program to accpet 2d array and print given matrix is symmetric or not
+
+OWNER: AKSHAY GANGARAM KADAM
+BATCH: PPA9
+*******************************************************************************/
+
+
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	int a[10][10],b[10][10],i,j,k,l,row,col,flag=0;
+
+	printf("ENTER YOUR ROW VALUE");
+	scanf("%d",&row);
+
+	printf("ENTER YOUR COL VALUE");
+	scanf("%d",&col);
+	
+	if(col==row)
+
+	{
+
+	printf("enter your array element\n");
+
+	for(i=0;i<row;i++)
+	{
+		for(j=0;j<col;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	
+
+
+
+	for(i=0,k=0;i<row;i++,k++)
+	{ 
+		for(j=0,l=0;j<col;j++,l++)
+		{
+			b[k][l]=a[j][i];
+		}
+	}
+
+	for(i=0,k=0;i<row;i++,k++)
+	{ 
+		for(j=0,l=0;j<col;j++,l++)
+		{
+			if(a[i][j]==b[k][l])
+			{
+                ;
+			}
+			else
+			{
+				flag=1;
+				break;
+			}
+
+		}
+	}
+
+	if(flag==0)
+	{
+		printf("given matrix is symmetric ");
+	}
+	else
+		printf("given matrix is  not symmetric ");
+
+
+
+
+
+
+	}
+	else
+		printf("enetr size of row and col not same");
+
+
+
+	getch();
+
+}
